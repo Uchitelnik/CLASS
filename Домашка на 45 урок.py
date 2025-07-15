@@ -1,4 +1,4 @@
-class BurgerShop:
+class  BurgerShop:
     def __init__(self):
         self.burger = []
 
