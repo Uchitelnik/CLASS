@@ -33,7 +33,7 @@ class  BurgerShop:
                 print(f"{self.burger[i]}:{i}")
 
 
-    def summa_burger(self):
+    def summa_burger( self):
         summ = 0
         bing = self.ingredient_burger()
         for i in self.burger:
