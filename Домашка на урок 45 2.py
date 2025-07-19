@@ -13,8 +13,11 @@ class  BurgerShop:
 
 
     def add_ingredient(self, ingredient):
-        self.burger.append(ingredient)
-        print(F"Ингредиент:{ingredient}")
+        if ingredient in self.ingredient_burger:
+            self.burger.append(ingredient)
+            print(f"Ингредиент:{ingredient}")
+        else:
+            print(f"Ингредиент {ingredient} не найден")
 
 
     def remove_ingredient(self , ingredient):
@@ -33,16 +36,16 @@ class  BurgerShop:
                 print(f"{self.burger[i]}:{i}")
 
 
-    def summa_burger( self):
+    def summa_burger(self):
         summ = 0
-        bing = self.ingredient_burger()
         for i in self.burger:
-            summ+=bing[i]
+            summ+=self.ingredient_burger[i]
         print(f"Общая стоимость: {summ} руб.")
+        return summ
 
 
 burger = BurgerShop()
-burger.add_ingredient("Булкочка")
+burger.add_ingredient("Булочка")
 burger.add_ingredient("Соус")
 burger.add_ingredient("Котлета")
 burger.add_ingredient("Сыр")
@@ -50,7 +53,7 @@ burger.add_ingredient("Лук")
 
 burger.show()
 
-print(burger.remove_ingredient("Лук"))
-print(burger.remove_ingredient("Чеснок"))
+burger.remove_ingredient("Лук")
+burger.remove_ingredient("Чеснок")
 
 burger.summa_burger()
