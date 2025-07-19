@@ -44,6 +44,7 @@ class  BurgerShop:
         return summ
 
 
+
 burger = BurgerShop()
 burger.add_ingredient("Булочка")
 burger.add_ingredient("Соус")
