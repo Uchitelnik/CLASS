@@ -32,7 +32,7 @@ def draw_grid():
 
 
 class Snake:
-    def _init_(self):
+    def __init__(self):
         self.positions = [(GRID_WIDTH // 2, GRID_HEIGHT // 2)]
         self.direction = (1, 0)
         self.length = 1
@@ -73,7 +73,7 @@ class Snake:
 
 
 class Food:
-    def _init_(self, snake_positions):
+    def __init__(self, snake_positions):
         self.position = self.randomize_position(snake_positions)
 
     def randomize_position(self, snake_positions):
